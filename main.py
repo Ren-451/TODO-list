@@ -59,5 +59,12 @@ def entertask():
     button_temp.pack()
     root1.mainloop()
 
+def deletetask():
+
+    # delete selected
+    selected = listbox_task.curselection()
+    listbox_task.delete(selected[0])
+
+    # is executed to mark done
 
 window.mainloop()
