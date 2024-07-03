@@ -67,4 +67,19 @@ def deletetask():
 
     # is executed to mark done
 
+def donetask():
+    marked = listbox_task.curselection()
+    temp = marked[0]
+
+    # store text
+
+    temp_marked = listbox_task.get(marked)
+
+    # update
+    temp_marked = temp_marked + "✔"
+
+    # delete then insert
+    listbox_task.delete(temp)
+    listbox_task.insert(temp, temp_marked)
+
 window.mainloop()
